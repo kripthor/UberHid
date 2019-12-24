@@ -29,7 +29,7 @@ Wifi keylogger with keyboard and mouse injection capabilities
 
 ![Wiring](docs/wiring.png)
 
-## How to build/deploy
+## How to program the devices
 
 ### Using [Platformio](https://platformio.org/)
 
