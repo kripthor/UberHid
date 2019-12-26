@@ -94,9 +94,9 @@ src_dir = ${workspacedir}/firmware/UberHID-Leonardo/.
 
 0. Connect the device between a keyboard and a computer. 
  ```
- ---------- --------- ----------
+ ----------     ---------     ----------
  |Keyboard| <-> |UBERHid| <-> |Computer|
- ---------- --------- ----------
+ ----------     ---------     ----------
  ```
 1. Connect to the device access point.
  - It can be visible or hidden depending on the configuration on file ```Config.h``` in ```firmware/UberHID-ESPUSB```. Other configurations available are the access point name and password.
