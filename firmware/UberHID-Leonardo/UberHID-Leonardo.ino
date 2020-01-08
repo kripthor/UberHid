@@ -1,3 +1,4 @@
+#include "SPI.h"
 #include "Keyb.h"
 #include "Mouse.h" 
 
